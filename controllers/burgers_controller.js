@@ -26,7 +26,7 @@ router.put('/burgers/update/:ID', function(req, res){
 });
 
 router.delete('/burgers/delete/:ID', function(req, res){
-  burger.deleteOne([req.body.delete], function(){
+  burger.deleteOne([req.body.brg], function(){
     res.redirect('/burgers');
   });
 });

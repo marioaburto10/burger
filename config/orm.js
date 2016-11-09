@@ -23,7 +23,7 @@ var orm = {
     });
   },
   deleteOne: function(table, condition, conditionVal, cb) {
-     var queryString = 'DELETE FROM ' + table + ' WHERE ' + condition + '=?';
+     var queryString = 'DELETE FROM ' + table + ' WHERE ' + condition + '= ?';
     connection.query(queryString, [conditionVal], function(err, result){
       if (err) throw err;
       cb(result);
