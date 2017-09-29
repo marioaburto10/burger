@@ -1,5 +1,7 @@
+// bring in our custom made orm 
 var orm = require('../config/orm.js');
 
+// create and export CRUD functions to use with our ORM and to later use with controller routes
 var burger = {
   selectAll: function (cb) {
     orm.selectAll('burgers', function (res){

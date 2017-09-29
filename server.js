@@ -13,15 +13,19 @@ app.use(bodyParser.urlencoded({
 }));
 // override with POST having ?_method=DELETE
 app.use(methodOverride('_method'));
+
+// bring in handlebars and use it as the app engine.
 var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({
   defaultLayout: 'main'
 }));
 app.set('view engine', 'handlebars');
 
+// bring in our routes from controllers folder
 var routes = require('./controllers/burgers_controller.js');
 app.use('/', routes);
 
+// set and listen to port
 var PORT = process.env.PORT || 4000;
 
 app.listen(PORT, function() {
