@@ -8,6 +8,7 @@ router.get('/', function (req, res){
 
 router.get('/burgers', function(req, res){
   burger.selectAll(function(data){
+    console.log(data);
     res.render('index', {burgers: data});
   });
 });
