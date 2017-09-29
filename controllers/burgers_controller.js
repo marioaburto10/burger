@@ -8,7 +8,7 @@ router.get('/', function (req, res){
 
 router.get('/burgers', function(req, res){
   burger.selectAll(function(data){
-    console.log(data);
+    // console.log(data);
     res.render('index', {burgers: data});
   });
 });
@@ -26,8 +26,9 @@ router.put('/burgers/update/:ID', function(req, res){
   });
 });
 
-router.delete('/burgers/delete/:ID', function(req, res){
-  burger.deleteOne([req.body.brg], function(){
+router.delete('/burgers/delete', function(req, res){
+  console.log(req.body.delete);
+  burger.deleteOne([req.body.delete], function(){
     res.redirect('/burgers');
   });
 });

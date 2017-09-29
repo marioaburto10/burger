@@ -40,14 +40,14 @@
 
   <div class="form-group">
     <label for="bg">Burger Name:</label>
-    <input type="text" id="bg" name="burgerInput">
+    <input type="text" id="brg" name="burgerInput">
   </div>
 
   <button type="submit">Add Burger</button>
 </form>
 
 <h2>Delete a burger</h2>
-<form class="delete-form" action="burgers/delete/{{this.ID}}?_method=DELETE" method="POST">
+<form class="delete-form" action="burgers/delete?_method=DELETE" method="POST">
 
   <div class="form-group">
     <label for="brg">ID of the burger you want to delete:</label>
