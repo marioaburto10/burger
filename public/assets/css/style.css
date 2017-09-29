@@ -1,9 +1,33 @@
 body {
   width: 99%;
   height: 900px;
-  background-color: green;
+  background-color: #7ae043;
 }
 
 #burger-image {
 	width: 25%;
+}
+
+.top-row, .middle-row, .bottom-row {
+	margin-top: 30px;
+}
+
+/*.eaten, .not-eaten {
+	margin: 5px;
+}*/
+
+/*@media (min-width: 1200px) {
+  .container {
+    width: 990px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 990px;
+  }
+}*/
+
+h1 {
+  color: #f30;
 }
