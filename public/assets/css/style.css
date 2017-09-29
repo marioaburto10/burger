@@ -1,0 +1,9 @@
+body {
+  width: 99%;
+  height: 900px;
+  background-color: green;
+}
+
+#burger-image {
+	width: 25%;
+}

@@ -22,6 +22,7 @@ router.post('/burgers/create', function(req, res){
 
 router.put('/burgers/update/:id', function(req, res){
   console.log(req.body.devoured);
+  console.log(req.params.id);
   burger.updateOne([req.body.devoured], [req.params.id], function(){
     res.redirect('/burgers');
     // res.send("burger has been eaten");
